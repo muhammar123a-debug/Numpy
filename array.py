@@ -68,3 +68,47 @@ print(arr6[filtering])
 arr7 = np.array([10,25,30,45,50,65,70,85])
 reshaped_arr = arr7.reshape(2,4)
 print(reshaped_arr)
+
+#Inserting elements
+arr8 = np.array([10,20,30,40,50])
+new_arr = np.insert(arr8, 2, 46)
+print(new_arr)
+
+# Inserting 2d array
+arr9 = np.array([[1,2,3],[4,5,6]])
+new_arr2d = np.insert(arr9, 1, [1,6,9], axis=0)
+print(new_arr2d)
+
+#appending elements
+arr10 = np.array([10,20,30])
+arr_appended = np.append(arr10, [40,50,60])
+print(arr_appended)
+
+#concatenation of arrays
+arr11 = np.array([1,2,4])
+arr12 = np.array([5,8,6])
+
+arr_concatenantion = np.concatenate((arr11, arr12))
+print(arr_concatenantion)
+
+#removing elements 
+arr13 = np.array([10,20,30,40,50])
+arr_removed = np.delete(arr13, 2)
+print(arr_removed)
+
+#removing from 2d array
+arr14 = np.array([[1,2,3],[4,5,6]])
+arr_removed_2d = np.delete(arr14, 0, axis=0)
+print(arr_removed_2d)
+
+# Stacks 
+arr15 = np.array([1,2,3])
+arr16 = np.array([4,5,6])
+arr_stacks = np.vstack((arr15,arr16))
+print(arr_stacks)
+arr_stacks = np.hstack((arr15,arr16))
+print(arr_stacks)
+
+#Splitting arrays
+arr17 = np.array([10,20,30,40,50,60])
+print(np.split(arr17, 3))
